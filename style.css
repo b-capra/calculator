@@ -23,30 +23,13 @@ body {
     margin: 20px 20px 10px 20px;
 }
 
-.add {
+.add, .subtract, .multiply, .divide {
     height: 110px;
     width: 125px;
     background-color: lightblue;
     margin: 10px;
-}
-
-.subtract {
-    height: 110px;
-    width: 125px;
-    background-color: lightblue;
-    margin: 10px;
-}
-
-.multiply {
-    height: 110px;
-    width: 125px;
-    background-color: lightblue;
-    margin: 10px;
-}
-
-.divide {
-    height: 110px;
-    width: 125px;
-    background-color: lightblue;
-    margin: 10px;
+    text-align: center;
+    font-size: 3em;
+    line-height: 110px;
+    color: lightslategray;
 }
