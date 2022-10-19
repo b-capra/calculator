@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    height: 800px;
+    width: 600px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.view {
+    height: 110px;
+    width: 560px;
+    background-color: white;
+    margin: 20px 20px 10px 20px;
+}
+
+.add {
+    height: 110px;
+    width: 125px;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+.subtract {
+    height: 110px;
+    width: 125px;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+.multiply {
+    height: 110px;
+    width: 125px;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+.divide {
+    height: 110px;
+    width: 125px;
+    background-color: lightblue;
+    margin: 10px;
+}
