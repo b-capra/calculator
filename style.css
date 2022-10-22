@@ -8,8 +8,9 @@ body {
 .bg {
     height: 800px;
     width: 600px;
-    background-color: lightgrey;
+    background-color: rgb(185, 185, 185);
     border-radius: 10px;
+    box-shadow: 0 0 5px rgb(0, 0, 0, .05), 2px 2px 5px rgb(0, 0, 0, .1);
 }
 
 .top {
@@ -27,6 +28,23 @@ body {
     border-radius: 5px;
 }
 
+#viewText, #histText {
+    text-align: right;
+    margin: 10px;
+}
+
+#histText {
+    font-size: 25px;
+    height: 30px;
+    color: rgb(145, 145, 145, 0.9);
+}
+
+#viewText {
+    font-size: 40px;
+    height: 48px;
+}
+
+
 .operator {
     height: 110px;
     width: 125px;
@@ -34,9 +52,10 @@ body {
     margin: 10px;
     text-align: center;
     font-size: 2.5em;
-    line-height: 110px;
+    line-height: 110px; 
     color: lightslategray;
     border-radius: 8px;
+    cursor: pointer
 }
 
 .bottom {
@@ -61,6 +80,7 @@ body {
     line-height: 110px;
     color: lightslategray;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .equal {
@@ -72,4 +92,5 @@ body {
     font-size: 2.5em;
     text-align: center;
     color: lightslategray;
+    cursor: pointer;
 }
