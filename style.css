@@ -10,7 +10,6 @@ body {
     width: 600px;
     background-color: rgb(185, 185, 185);
     border-radius: 10px;
-    box-shadow: 0 0 5px rgb(0, 0, 0, .05), 2px 2px 5px rgb(0, 0, 0, .1);
 }
 
 .top {
@@ -70,7 +69,7 @@ body {
     width: 455px;
 }
 
-.number {
+.number, #dot, #clear {
     height: 110px;
     width: 125px;
     background-color: whitesmoke;
