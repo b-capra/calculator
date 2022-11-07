@@ -65,10 +65,10 @@ class Calculator {
       integerDisplay = ''
     } else {
       integerDisplay = integerDigits.toLocaleString('en', {
-      maximumFractionDigits: 0 })
+      maximumFractionDigits: 0 });
     }
     if (decimalDigits != null) {
-      return `${integerDisplay}.${decimalDigits}`
+      return `${integerDisplay}.${decimalDigits}`;
     } else {
       return integerDisplay;
     }
@@ -111,14 +111,14 @@ operBtns.forEach(btn => {
 equalBtn.addEventListener('click', btn => {
   calculator.compute();
   calculator.updateDisplay();
-})
+});
 
 allClearBtn.addEventListener('click', btn => {
   calculator.clear();
   calculator.updateDisplay();
-})
+});
 
 deleteBtn.addEventListener('click', btn => {
   calculator.delete();
   calculator.updateDisplay();
-})
+});
