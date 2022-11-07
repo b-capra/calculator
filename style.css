@@ -21,6 +21,7 @@ body {
 
 .calc-grid > button {
   cursor: pointer;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 2rem;
   border: 1px solid white;
   outline: none;
