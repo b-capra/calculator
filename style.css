@@ -1,96 +1,58 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: normal;
+}
+
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(122, 245, 118)
 }
 
-.bg {
-    height: 800px;
-    width: 600px;
-    background-color: slategray;
-    border-radius: 10px;
-    box-shadow: 5px 5px 12px rgba(0,0,0,0.5);
+.calc-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.calc-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgb(255, 255, 255, .75);
 }
 
-.view {
-    height: 110px;
-    width: 560px;
-    background-color: white;
-    margin: 20px 20px 10px 20px;
-    border-radius: 5px;
+.calc-grid > button:hover {
+  background-color: rgb(255, 255, 255, .9);
 }
 
-#viewText, #histText {
-    text-align: right;
-    margin: 10px;
+.span-two {
+  grid-column: span 2;
 }
 
-#histText {
-    font-size: 25px;
-    height: 30px;
-    color: rgb(145, 145, 145, 0.9);
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-#viewText {
-    font-size: 40px;
-    height: 48px;
+.output .last-operand {
+  color: rgb(255, 255, 255, .75);
+  font-size: 1.5rem;
 }
 
-
-.operator {
-    height: 110px;
-    width: 125px;
-    background-color: lightblue;
-    margin: 10px;
-    text-align: center;
-    font-size: 2.5em;
-    line-height: 110px; 
-    color: lightslategray;
-    border-radius: 8px;
-    cursor: pointer
-}
-
-.bottom {
-    display: flex;
-}
-
-.grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 455px;
-}
-
-.number, #dot, #clear {
-    height: 110px;
-    width: 125px;
-    background-color: whitesmoke;
-    margin: 10px;
-    font-size: 2.5em;
-    text-align: center;
-    line-height: 110px;
-    color: lightslategray;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.equal {
-    height: 500px;
-    width: 125px;
-    background-color: lightcyan;
-    margin-top: 10px;
-    border-radius: 8px;
-    font-size: 2.5em;
-    text-align: center;
-    color: lightslategray;
-    cursor: pointer;
+.output .current-operand {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
 }
