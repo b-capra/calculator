@@ -12,7 +12,7 @@ class Calculator {
   }
 
   delete() {
-
+    this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
 
   appendNumber(number) {
@@ -56,9 +56,31 @@ class Calculator {
     this.lastOperand = '';
   }
 
+  getDisplayNumber(number) {
+    const stringNumber = number.toString();
+    const integerDigits = parseFloat(stringNumber.split('.')[0]);
+    const decimalDigits = stringNumber.split('.')[1];
+    let integerDisplay;
+    if (isNaN(integerDigits)) {
+      integerDisplay = ''
+    } else {
+      integerDisplay = integerDigits.toLocaleString('en', {
+      maximumFractionDigits: 0 })
+    }
+    if (decimalDigits != null) {
+      return `${integerDisplay}.${decimalDigits}`
+    } else {
+      return integerDisplay;
+    }
+  }
+
   updateDisplay() {
-    this.currentOperandText.innerText = this.currentOperand;
-    this.lastOperandText.innerText = this.lastOperand;
+    this.currentOperandText.innerText = this.getDisplayNumber(this.currentOperand);
+    if (this.operation != null) {
+      this.lastOperandText.innerText = `${this.getDisplayNumber(this.lastOperand)} ${this.operation}`;
+    } else {
+      this.lastOperandText.innerText = '';
+    }
   }
 }
 
@@ -88,5 +110,15 @@ operBtns.forEach(btn => {
 
 equalBtn.addEventListener('click', btn => {
   calculator.compute();
+  calculator.updateDisplay();
+})
+
+allClearBtn.addEventListener('click', btn => {
+  calculator.clear();
+  calculator.updateDisplay();
+})
+
+deleteBtn.addEventListener('click', btn => {
+  calculator.delete();
   calculator.updateDisplay();
 })
